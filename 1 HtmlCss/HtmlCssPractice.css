@@ -1,0 +1,474 @@
+/* width: fit-content; علي قد المحتوي */
+/* button{user-select: none;} عشان لما تدوس ميعملش سليكت للكلام */
+/* input[type="radio"]{appearance: none;} */
+/* box-shadow: 0 0 10px #ddd; */
+/* box-shadow: X Y opacity spread color inset; */
+/* white-space: nowrap; overflow: hidden; text-overflow: ellipsis; */
+/* 1rem = font size in :root */
+/* text-align: justify; محازي للديف */
+/* height: 30px; line-height: 30px; */
+/* div{counter-reset: num;} div p::before{counter-increment: num; content: counter(num);} */
+/* div{counter-reset: num;} div p::before{counter-increment: num; content: "Element " counter(num);} */
+/* :root{--mainColor: #009688;} color:var(--mainColor, black); */
+/* .container{--mainColor: #009688;} color:var(--mainColor, black); */
+/* img {filter: grayscale(100%);} */
+/* <div contenteditable="true" > */
+/* caret-color: red; */
+/* pointer-events:none >> delete event on element */
+/* ::selection {background-color: yellow;} */
+/* div::selection {background-color: yellow;} */
+/* ::placeholder{color:red} */
+/* input:focus{} */
+/* input:checked{} */
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 1 Center DIV */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+.box {
+  background-color: #eee;
+  margin: 40px auto;
+  width: 800px;
+  height: 300px;
+  position: relative;
+  z-index: -10;
+}
+.box:before {
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  margin-left: -2px;
+}
+.box:after {
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  margin-top: -2px;
+}
+.box:before,
+.box:after {
+  content: "";
+  background-color: #ddd;
+  position: absolute;
+  z-index: -5;
+}
+.box .item {
+  background-color: #f00;
+  width: 200px;
+  height: 100px;
+}*/
+
+/* Margin + Position */
+/* .box .item {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  top: 50%;
+} */
+
+/* Margin + Transform */
+/* .box .item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* Flex */
+/* .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  */
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 2 Radio Box */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+form {
+  width: 400px;
+  margin: 20px auto;
+  background-color: rgb(82, 22, 105);
+  color: aqua;
+  padding: 15px;
+  border-radius: 3px;
+}
+form > div {
+  padding: 5px 0;
+  display: flex;
+}
+form label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+form label::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 1px solid tomato;
+    margin-right: 10px;
+}
+form input[type="radio"]:checked + label::after,
+form input[type="radio"]:not(:checked):hover + label::after {
+  content: "";
+  background-color: tomato;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 4px;
+}
+form input[type="radio"]:not(:checked):hover + label::after {
+  opacity: 0.5;
+}
+form input[type="radio"]:checked + label {
+  color: tomato;
+}
+form input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+}*/
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 3 Shadow Hover */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+.product {
+  width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.product .number {
+  background-color: tomato;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  transition: box-shadow 0.7s;
+}
+.product h3 {
+  margin: 15px 0;
+  font-size: 26px;
+  transition: color 0.7s;
+}
+.product p {
+  line-height: 1.6;
+  transition: color 0.7s;
+  font-size: 18px;
+}
+.product:hover .number {
+  box-shadow: 0 0 0 400px tomato;
+}
+.product:hover h3,
+.product:hover p {
+  color: white;
+} */
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 4 Border >> Before After */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+.product {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.product p {
+  line-height: 1.6;
+}
+.product h2 {
+  margin: 0 0 20px;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px;
+  width: calc(100% + 80px);
+  position: relative;
+  left: -40px;
+}
+.product h2:before,
+.product h2::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  border: 10px solid;
+}
+.product h2:before {
+  left: 0;
+  border-color: #02766b #02766b transparent transparent;
+}
+.product h2:after {
+  right: 0;
+  border-color: #02766b transparent transparent #02766b;
+}
+ */
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 5 Toll Tip */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+button {
+  background-color: #eee;
+  margin: 100px auto;
+  padding: 10px 20px;
+  display: block;
+  font-size: 40px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+button:focus {
+  outline: none;
+}
+button span {
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  min-width: 240px;
+  padding: 10px 15px;
+  top: -60px;
+  transition: 0.5s;
+  opacity: 0;
+  border-radius: 3px;
+}
+button span:before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 10px;
+  border-color: #333 transparent transparent;
+}
+button:hover {
+  overflow: visible;
+}
+button:hover span {
+  opacity: 1;
+}
+[data-position="bottom"] span {
+  top: auto;
+  bottom: -60px;
+}
+[data-position="bottom"] span:before {
+  bottom: auto;
+  top: -20px;
+  border-color: transparent transparent #333;
+} */
+/*********************************/
+/*
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+button {
+  background-color: #eee;
+  margin: 100px auto;
+  padding: 10px 20px;
+  display: block;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+button::before{
+  content: "";
+  border: 15px solid;
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: black transparent transparent transparent;
+  opacity: 0;
+  transition: opacity .5s;
+}
+button::after{
+  content: attr(data-title);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity .5s;
+}
+button:hover{
+  overflow: visible;
+}
+button:hover::before,
+button:hover::after{
+  opacity: 1;
+}
+*/
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 6 Fill Text */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+}
+.fill {
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  width: fit-content;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px #333;
+  position: relative;
+}
+.fill::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-text-fill-color: #ff5722;
+  transition: .5s;
+  width: 0;
+  overflow: hidden;
+}
+.fill:hover::before {
+  width: 100%;
+} */
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/* 7 Hover Text */
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Tahoma;
+  background-color: #333;
+}
+.link {
+  color: #8bc34a;
+  text-decoration: none;
+  display: block;
+  border: 2px solid #8bc34a;
+  margin: 20px auto;
+  position: relative;
+  width: 160px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  overflow: hidden;
+}
+.link:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.link span {
+  display: block;
+  transition: 0.3s;
+}
+.link:hover:before {
+  transform: translateX(0);
+}
+.link:hover span {
+  transform: translateX(100%);
+} */
+
+
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+
+

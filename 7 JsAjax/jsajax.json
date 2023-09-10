@@ -1,0 +1,31 @@
+[{
+    "name": "ziad",
+    "age": 22,
+    "skills": ["html", "css", "js"]
+},
+{
+    "name": "aLi",
+    "age": 25,
+    "skills": ["html", "css", "js"]
+},
+{
+    "name": "sayes",
+    "age": 28,
+    "skills": ["html", "css", "js"]
+},
+{
+    "name": "medo",
+    "age": 12,
+    "skills": ["html", "css", "js"]
+},
+{
+    "name": "ahmed",
+    "age": 33,
+    "skills": ["html", "css", "js"]
+},
+{
+    "name": "mosa",
+    "age": 55,
+    "skills": ["html", "css", "js"]
+}
+]

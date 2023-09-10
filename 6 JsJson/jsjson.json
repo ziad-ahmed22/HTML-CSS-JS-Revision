@@ -1,0 +1,44 @@
+[{
+    "name": "ziad",
+    "age": 22,
+    "skills": [
+        "html",
+        "css",
+        {
+            "react js": 80,
+            "angular js": 50,
+            "vue js": 60
+        }
+    ],
+    "lang": [
+        "arabic",
+        [
+            "english us",
+            "english uk"
+        ]
+    ],
+    "married": false,
+    "sons": null
+},
+{
+    "name": "ziad",
+    "age": 22,
+    "skills": [
+        "html",
+        "css",
+        {
+            "react js": 80,
+            "angular js": 50,
+            "vue js": 60
+        }
+    ],
+    "lang": [
+        "arabic",
+        [
+            "english us",
+            "english uk"
+        ]
+    ],
+    "married": false,
+    "sons": null
+}]
